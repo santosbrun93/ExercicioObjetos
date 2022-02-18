@@ -1,4 +1,4 @@
-package Veiculo;
+package ExerciciosAula15_02.Veiculo;
 
 public class Veiculo {
 
@@ -73,7 +73,7 @@ public class Veiculo {
 
     @Override
     public String toString() {
-        return "Veiculo:" +
+        return "ExerciciosAula15_02.ExerciciosAula15_02.Funcionario.Funcionario.Funcionario.Veiculo:" +
                 "\n Modelo: " + modelo +
                 ",\n Marca: " + marca +
                 ",\n Ano:  " + ano;

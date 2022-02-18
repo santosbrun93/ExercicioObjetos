@@ -1,4 +1,4 @@
-package Funcionario;
+package ExerciciosAula15_02.Funcionario;
 
 import java.util.Scanner;
 

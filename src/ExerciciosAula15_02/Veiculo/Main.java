@@ -1,6 +1,5 @@
-package Veiculo;
+package ExerciciosAula15_02.Veiculo;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {

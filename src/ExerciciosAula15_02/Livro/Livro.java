@@ -1,4 +1,4 @@
-package Livro;
+package ExerciciosAula15_02.Livro;
 
 public class Livro {
 
@@ -58,14 +58,14 @@ public class Livro {
         double percentual = (livro.getQuantidadePaginasLidas() * 100) / livro.getQuantidadePaginasTotal();
 
 
-        System.out.printf("Você já leu %.2f%%  do Livro ", percentual);
+        System.out.printf("Você já leu %.2f%%  do ExerciciosAula15_02.ExerciciosAula15_02.Funcionario.Funcionario.Funcionario.Livro ", percentual);
         return percentual;
 
     }
 
     @Override
     public String toString() {
-        return "Livro:" +
+        return "ExerciciosAula15_02.ExerciciosAula15_02.Funcionario.Funcionario.Funcionario.Livro:" +
                 "\nTítulo : '" + titulo + '\'' +
                 ",\n Nome do Leitor : '" + nomeLeitor + '\'' +
                 ",\n quantidadePaginasTotal: " + quantidadePaginasTotal +

@@ -1,4 +1,4 @@
-package Livro;
+package ExerciciosAula15_02.Livro;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 
         System.out.println("Bem vindo ! ");
-        System.out.println("Insira o título do Livro: ");
+        System.out.println("Insira o título do ExerciciosAula15_02.ExerciciosAula15_02.Funcionario.Funcionario.Funcionario.Livro: ");
         String tituloLivro = entrada.nextLine();
 
         System.out.println("Insira o nome do leitor: ");

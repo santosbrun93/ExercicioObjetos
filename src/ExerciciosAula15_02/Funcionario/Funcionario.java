@@ -1,6 +1,4 @@
-package Funcionario;
-
-import java.sql.Time;
+package ExerciciosAula15_02.Funcionario;
 
 public class Funcionario {
 
@@ -70,7 +68,7 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario{" +
+        return "ExerciciosAula15_02.ExerciciosAula15_02.Funcionario.Funcionario.Funcionario{" +
                 "nome='" + nome + '\'' +
                 ", sobrenome='" + sobrenome + '\'' +
                 '}';
