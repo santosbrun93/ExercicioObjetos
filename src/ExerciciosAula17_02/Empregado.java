@@ -1,6 +1,6 @@
 package ExerciciosAula17_02;
 
-public abstract class Empregado extends Pessoa{
+public class Empregado extends Pessoa{
 
     private int codigoSetor;
 
@@ -61,9 +61,19 @@ public abstract class Empregado extends Pessoa{
     }
 
     public double calcularSalario(Empregado empregado){
-        double salarioLiquido = this.getSalarioBase() - (this.getSalarioBase() * this.getImposto());
+        double salarioLiquido = this.getSalarioBase() - (this.getSalarioBase() * (this.getImposto() / 100));
 
         return salarioLiquido;
     }
 
+    @Override
+    public String toString() {
+        return "\nEmpregado :" +
+                "\nNome : " + getNome() +
+                ", \nEndereco : " + getEndereco() +
+                ", \nTelefone : " + getTelefone() +
+                ", \nCódigo do Setor :" + getCodigoSetor() +
+                ", \nSalário Base :" + getSalarioBase() +
+                ", \nimposto: " + getImposto()+"%" ;
+    }
 }

@@ -48,8 +48,23 @@ public class Operario extends Empregado {
 
     @Override
     public double calcularSalario(Empregado empregado) {
-        double salarioLiquido = this.getSalarioBase() - (this.getSalarioBase() * this.getImposto());
+        double salarioLiquido = this.getSalarioBase() - (this.getSalarioBase() * (this.getImposto() / 100));
 
-        return salarioLiquido + (this.getValorProducao() * this.getComissao());
+        return salarioLiquido + (this.getValorProducao() * (this.getComissao() / 100 ));
+    }
+
+
+
+    @Override
+    public String toString() {
+        return " Operario :" +
+                "\nNome : " + getNome() +
+                ", \nEndereco : " + getEndereco() +
+                ", \nTelefone : " + getTelefone() +
+                ", \nCódigo do Setor :" + getCodigoSetor() +
+                ", \nSalário Base :" + getSalarioBase() +
+                ", \nimposto : " + getImposto()+"%"+
+                ", \nValor de produção : " + getValorProducao() +
+                ", \nComissão sobre produção : " + getComissao() ;
     }
 }

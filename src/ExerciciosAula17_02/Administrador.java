@@ -34,7 +34,20 @@ public class Administrador extends Empregado{
 
     @Override
     public double calcularSalario(Empregado empregado){
-        double salarioLiquido = this.getSalarioBase() - (this.getSalarioBase() * this.getImposto()) ;
+        double salarioLiquido = this.getSalarioBase() - (this.getSalarioBase() * (this.getImposto() / 100));
         return salarioLiquido + this.getAjudaDeCusto();
+    }
+
+
+    @Override
+    public String toString() {
+        return "Administrador :" +
+                "\nNome : " + getNome() +
+                ", \nEndereco : " + getEndereco() +
+                ", \nTelefone : " + getTelefone() +
+                ", \nCódigo do Setor :" + getCodigoSetor() +
+                ", \nSalário Base :" + getSalarioBase() +
+                ", \nimposto : " + getImposto() +"%"+
+                ", \nAjuda De Custo : " + getAjudaDeCusto();
     }
 }

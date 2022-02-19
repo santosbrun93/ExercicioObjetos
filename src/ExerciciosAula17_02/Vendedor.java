@@ -48,10 +48,23 @@ public class Vendedor extends Empregado{
 
     @Override
     public double calcularSalario(Empregado empregado) {
-        double salarioLiquido = this.getSalarioBase() - (this.getSalarioBase() * this.getImposto());
+        double salarioLiquido = this.getSalarioBase() - (this.getSalarioBase() * (this.getImposto() / 100));
 
-        return salarioLiquido + (this.getValorVendas() * this.getComissao());
+        return salarioLiquido + ((this.getValorVendas() * (this.getComissao() / 100 )));
 
 
+    }
+
+    @Override
+    public String toString() {
+        return " Vendedor :" +
+                "\nNome : " + getNome() +
+                ", \nEndereco : " + getEndereco() +
+                ", \nTelefone : " + getTelefone() +
+                ", \nCódigo do Setor :" + getCodigoSetor() +
+                ", \nSalário Base :" + getSalarioBase() +
+                ", \nimposto : " + getImposto()+"%" +
+                ", \nValor de Vendas : " + getValorVendas() +
+                ", \nComissão sobre vendas : " + getComissao();
     }
 }

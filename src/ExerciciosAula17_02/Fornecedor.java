@@ -45,10 +45,18 @@ public class Fornecedor extends Pessoa{
         this.valorDivida = valorDivida;
     }
 
-    public void obterSaldo(Fornecedor fornecedor){
+    public double obterSaldo(Fornecedor fornecedor){
         double saldo = fornecedor.getValorCredito() - fornecedor.getValorDivida();
+        return saldo;
+    }
 
-
-
+    @Override
+    public String toString() {
+        return "\nFornecedor: " +
+                "\nNome : " + getNome() +
+                ", \nEndereco : " + getEndereco() +
+                ", \nTelefone : " + getTelefone() +
+                ", \nvalor do Crédito : " + getValorCredito() +
+                ", valor da Divida : " + getValorDivida() ;
     }
 }

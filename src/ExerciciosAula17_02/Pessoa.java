@@ -49,4 +49,12 @@ public class Pessoa {
         this.endereco = endereco;
         this.telefone = telefone;
     }
+
+    @Override
+    public String toString() {
+        return "\nPessoa: " +
+                "\nNome : " + getNome() +
+                ", \nEndereco : " + getEndereco() +
+                ", \nTelefone : " + getTelefone() ;
+    }
 }
