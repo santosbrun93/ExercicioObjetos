@@ -22,6 +22,8 @@ public class Operario extends Empregado {
         this.comissao = comissao;
     }
 
+    //Os construtores são formas de poliformismo Overload, devido a utilização de multiplos
+    // métodos com chaves de valores diferente para serem recebidas.
     public Operario(int codigoSetor, double salarioBase, double imposto, double valorProducao, double comissao) {
         super(codigoSetor, salarioBase, imposto);
         this.valorProducao = valorProducao;
@@ -46,16 +48,13 @@ public class Operario extends Empregado {
         this.comissao = comissao;
     }
 
-    @Override
+    @Override     //Override de sobreescrição do método da classe pai Empregado.
     public double calcularSalario(Empregado empregado) {
         double salarioLiquido = this.getSalarioBase() - (this.getSalarioBase() * (this.getImposto() / 100));
-
         return salarioLiquido + (this.getValorProducao() * (this.getComissao() / 100 ));
     }
 
-
-
-    @Override
+    @Override    //Override de sobreescrição do método da classe pai Empregado.
     public String toString() {
         return " Operario :" +
                 "\nNome : " + getNome() +

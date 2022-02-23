@@ -32,7 +32,8 @@ public class Empregado extends Pessoa{
         this.imposto = imposto;
     }
 
-
+    //Os construtores são formas de poliformismo Overload, devido a utilização de multiplos
+    // métodos com chaves de valores diferente para serem recebidas.
     public Empregado(int codigoSetor, double salarioBase, double imposto) {
         this.codigoSetor = codigoSetor;
         this.salarioBase = salarioBase;
@@ -62,11 +63,33 @@ public class Empregado extends Pessoa{
 
     public double calcularSalario(Empregado empregado){
         double salarioLiquido = this.getSalarioBase() - (this.getSalarioBase() * (this.getImposto() / 100));
-
         return salarioLiquido;
     }
 
-    @Override
+    //Nesse cenário foi implementado um exemplo de polimorfismo de Overload, criados múltiplos métodos com diferentes parâmetros a serem recebidos.
+    public double calcularSalario(Empregado empregado, int codigoSetor){
+        codigoSetor = empregado.getCodigoSetor();
+
+        double bonus = 0;
+        if(codigoSetor <= 0 ){
+                bonus = 0;
+                System.out.println("Valor inválido no código do Setor, bonus será zerado!!");
+            }else if(codigoSetor == 1){
+                bonus = this.getSalarioBase() * 0.05;
+            }else if(codigoSetor == 2){
+                bonus = this.getSalarioBase() * 0.10;
+            }else if(codigoSetor == 3){
+                bonus = this.getSalarioBase() * 0.20;
+            }else if(codigoSetor > 3){
+                bonus = 0;
+                System.out.println("Valor inválido no código do Setor, bonus será zerado!!");
+        }
+
+        double salarioLiquido = this.getSalarioBase() - (this.getSalarioBase() * (this.getImposto() / 100));
+        return salarioLiquido + bonus;
+    }
+
+    @Override                //Override de sobreescrição do método da classe pai Pessoa.
     public String toString() {
         return "\nEmpregado :" +
                 "\nNome : " + getNome() +
@@ -77,3 +100,20 @@ public class Empregado extends Pessoa{
                 ", \nimposto: " + getImposto()+"%" ;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

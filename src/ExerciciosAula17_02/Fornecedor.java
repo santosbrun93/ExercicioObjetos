@@ -22,6 +22,8 @@ public class Fornecedor extends Pessoa{
         this.valorDivida = valorDivida;
     }
 
+    //Os construtores são formas de poliformismo Overload, devido a utilização de multiplos
+    // métodos com chaves de valores diferente para serem recebidas.
     public Fornecedor(double valorCredito, double valorDivida) {
         this.valorCredito = valorCredito;
         this.valorDivida = valorDivida;
@@ -50,7 +52,7 @@ public class Fornecedor extends Pessoa{
         return saldo;
     }
 
-    @Override
+    @Override   //Override de sobreescrição do método da classe pai Pessoa.
     public String toString() {
         return "\nFornecedor: " +
                 "\nNome : " + getNome() +
